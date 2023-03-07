@@ -45,15 +45,15 @@ async def _(event):
 	chnUser = '@t06bot '
 	chtity = await ArsThon.get_entity(chnUser)
 	await ArsThon.send_message('t06bot' ,'/start')
-	sleep(3)
+	
 	fiess = await ArsThon.get_messages('t06bot', limit=1)
 	await fiess[0].click(2)
-	sleep(4)
+	
 	autherMess = await ArsThon.get_messages('t06bot', limit=1)
 	await autherMess[0].click(0)
-	sleep(5)
+	
 	for first  in range(9999):
-	    sleep(8)
+	    sleep(2)
 	    Entry = await ArsThon(GetHistoryRequest(peer=chnUser,limit=1,offset_date=None,offset_id=0,max_id=0,min_id=0,add_offset=0,hash=0))
 	    Mess = Entry.messages[0]
 	    if Mess.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
@@ -70,7 +70,7 @@ async def _(event):
 	        await MessAg[0].click(text='تحقق')
 	    except :
 	       await ArsThon.send_message('me','You have been Banned in BI Bot . ')
-	       sleep(1900)
+	       sleep(100)
 
 @ArsThon.on(events.NewMessage(outgoing=True, pattern="startAQ"))
 async def _(event):
