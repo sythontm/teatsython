@@ -14,9 +14,32 @@ import asyncio
 import logging
 import base64
 import datetime
+import os
+import base64
+import logging
+import asyncio
+import time
+from telethon.tl import functions, types
+from telethon.tl.functions.messages import ImportChatInviteRequest as Get
+from telethon.utils import get_display_name
+from telethon.tl.functions.channels import JoinChannelRequest
+from telethon.errors import FloodWaitError
+from telethon import TelegramClient, events
+from collections import deque
+from telethon.errors.rpcerrorlist import (
+    UserAlreadyParticipantError,
+    UserNotMutualContactError,
+    UserPrivacyRestrictedError,
+)
+from telethon.tl.functions.channels import InviteToChannelRequest
+from telethon.sessions import StringSession
+from telethon.tl.types import InputPeerUser
+from telethon.tl.functions.contacts import GetBlockedRequest, UnblockRequest
 
+APP_ID  = ("24671318")
+API_HASH = ("a13a303efcd6cd1de98e4222b537f5c9")
 
-
+sython = TelegramClient(StringSession(), APP_ID, API_HASH)
 # -
 
 sedthon.start()
