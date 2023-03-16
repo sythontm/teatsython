@@ -51,7 +51,7 @@ day = datetime.datetime.now().strftime("%A")
 m9zpi = f"{y}-{m}-{dayy}"
 sec = time.time()
 
-hijri_day = tran.translate(str(day), dest="ar")
+
 hijri = f"{Gregorian.today().to_hijri()} - {hijri_day.text}"
 LOGS = logging.getLogger(__name__)
 
