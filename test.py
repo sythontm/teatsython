@@ -39,7 +39,7 @@ from telethon.tl.functions.contacts import GetBlockedRequest, UnblockRequest
 APP_ID  = ("24671318")
 API_HASH = ("a13a303efcd6cd1de98e4222b537f5c9")
 
-sython = TelegramClient(StringSession(), APP_ID, API_HASH)
+sedthon = TelegramClient(StringSession(), APP_ID, API_HASH)
 # -
 
 sedthon.start()
